@@ -2,6 +2,8 @@
 
 **Pip-Board** is a smart notification filter and focus assistant for Android. It sits between you and your phone's notification stream — capturing alerts based on rules you set, reading them aloud, and reminding you of the ones that matter.
 
+> **Scope:** This guide covers the standard Pip-Board release. That build centers on the notification workflow — the **Board**, **Rules**, **History**, and **Settings** (plus home-screen widgets). Additional modules that appear in development builds — timers, tasks, daily routines, and flashcards — are not part of this release, so this guide does not cover them.
+
 ---
 
 ## Table of Contents
@@ -148,8 +150,21 @@ Each branch can have one or more effects:
 | **Capture** | Saves the notification to the Board (always on by default) |
 | **Read Aloud** | Speaks the notification using the device's text-to-speech engine |
 | **Repeat Reminder** | Keeps alerting you at an interval until you clear the capture |
+| **Silence (block fallback)** | Matches and consumes the notification silently — no sound, no read, no reminder — and stops any lower-priority or fallback rule from also acting on it |
 
 Combine effects freely — for example, read aloud AND set a repeat reminder on the same branch.
+
+### Silence (block fallback)
+
+Use **Silence** when you want a specific notification handled by *nothing* — not even a broad fallback rule.
+
+**Example:** You have a catch-all *Email (Fallback)* rule that reads every email aloud, plus a specific rule for work-order emails you no longer want announced. Instead of deleting the specific rule (which would let the fallback read the whole email), turn on **Silence** for its branch. Now those emails are captured to the Board quietly, and the fallback never touches them.
+
+- Turning on Silence overrides Read Aloud and Reminders for that branch.
+- A rule with a Silence branch shows a **SILENT** tag on the Rules list.
+- Notifications silenced this way appear in **History** with a mute icon, so you can still see they arrived.
+
+> **Audio never overlaps.** Read-alouds, reminder tones, and the hourly chime all play one at a time — a new notification's read waits for the current one to finish rather than talking over it.
 
 ---
 
@@ -206,6 +221,15 @@ Enable **Repeat Reminder** on a branch to keep alerting you until you manually c
 
 To stop reminders early, tap the stop icon on the capture in the Board, or swipe to clear it.
 
+### Sync Reminders
+
+Reminders never overlap — they play one at a time. The **Sync Reminders** setting (Settings → Reminders, on by default) controls their *timing*:
+
+- **On** — active reminders are batched onto a shared schedule so they tend to arrive together in one session instead of scattered through the day.
+- **Off** — each active reminder fires on its own interval, whenever it comes due.
+
+Sync is based on reminders that are actually active (a notification has triggered them) — a rule that hasn't captured anything yet doesn't affect the schedule.
+
 ---
 
 ## 9. Notification History
@@ -229,6 +253,7 @@ These settings apply to every rule before individual rule conditions are checked
 | **Capture Ongoing** | Off | Include persistent notifications (music players, navigation, etc.) |
 | **Capture Silent** | Off | Include notifications posted without sound |
 | **Exclude Group Summaries** | On | Skip Android bundle summary rows (reduces noise) |
+| **Sync Reminders** | On | Batch active repeat-reminders onto one shared schedule so they arrive together; off, each fires on its own interval |
 | **Use 24h Format** | Off | Show timestamps in 24-hour format across the app |
 | **Hourly Chime** | Off | Play an audio chime or speak the time at the top of each hour |
 
