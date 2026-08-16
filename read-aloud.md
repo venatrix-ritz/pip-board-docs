@@ -88,8 +88,10 @@ being said.
 **Music pauses and resumes.** ProBoard requests audio focus only for as long as it's speaking, and
 releases it properly afterwards, so whatever you were listening to comes back on its own.
 
-**Engine.** Settings lets you pick which installed TTS engine to use, if you have more than one.
-Voice, speed and pitch come from that engine's own system settings.
+**Engine.** ProBoard picks a text-to-speech engine automatically on first use, preferring Google's,
+then Samsung's, then whatever else is installed. There's no engine picker in Settings — voice,
+speed and pitch all come from that engine's own settings under Android's
+**Settings → Accessibility → Text-to-speech output**.
 
 ---
 

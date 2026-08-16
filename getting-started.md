@@ -35,9 +35,12 @@ Only needed for full-screen routine alarms. **Settings → Apps → ProBoard →
 
 ## Check it's working
 
-Open ProBoard. The status line at the top of the screen shows whether the listener is connected.
-If it says the service is inactive, re-check step 2 — Android sometimes drops notification access
-after an app update, and ProBoard will warn you when it notices.
+Open ProBoard. If notification access isn't granted, a **GRANT NOTIFICATION LISTENER ACCESS** banner
+sits at the top of the Board with a **FIX** button that takes you straight to the right system
+screen. No banner means the listener is connected.
+
+That banner is worth remembering — Android sometimes revokes notification access after an app
+update without telling you, and this is where it shows up.
 
 ---
 
