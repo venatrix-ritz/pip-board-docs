@@ -42,8 +42,9 @@ Off by default. When on, marks the top of every hour.
 | **Gap length** | Silence between tones |
 | **Chime Wait** | The sleep window — hours during which the chime stays silent |
 
-In beep mode the hour is encoded in the tones: long tones for each five hours, short tones for the
-remainder. Three long and two short is eight o'clock.
+In beep mode the hour is encoded in the tones: one long tone (a low A) per five hours, then one
+short tone (a higher E) for each hour remaining. Eight o'clock is one long and three short; noon is
+two long and two short.
 
 ### Routine alerts
 

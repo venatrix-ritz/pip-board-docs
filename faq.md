@@ -23,8 +23,9 @@ toggle in that rule's policy settings.
 
 **3. Is App Active on, and is notification access still granted?**
 
-Android sometimes revokes notification access after an app update without saying so. Settings →
-Permissions shows the current state.
+Android sometimes revokes notification access after an app update without saying so. If it has, the
+Board shows a **GRANT NOTIFICATION LISTENER ACCESS** banner with a FIX button. Settings →
+Permissions also lists the current state of every permission.
 
 **4. Is the rule itself enabled?**
 
@@ -88,7 +89,8 @@ Clearing an entry in ProBoard cancels its reminders. Clearing the original notif
 system shade does **not** — that's the entire point of pinning. A persistent reminder is meant to
 outlive a careless swipe.
 
-Clear it from the Board, or tap stop on the entry.
+Clear it from the Board, or long-press the entry to select it and use **Stop reminders** — that
+silences the nagging while leaving the entry on the Board.
 
 ---
 

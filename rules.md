@@ -44,11 +44,15 @@ Matches text in the notification. Choose which fields to look at:
 | Subtext | Secondary line: account name, folder, category |
 | Big text | The expanded body, when the notification has one |
 
-Title and text are checked by default. Three matching modes:
+Title and text are checked by default. Three matching modes, all **case-insensitive**:
 
-- **Contains** — plain substring, case-insensitive. The default.
+- **Contains** — plain substring. The default.
 - **Exact** — the whole field must equal your query.
-- **Regex** — full regular expression. Invalid patterns simply never match rather than crashing.
+- **Regex** — full regular expression. A pattern that fails to compile simply never matches rather
+  than breaking the rule, so a typo makes a condition go quiet rather than crash anything.
+
+A condition passes if *any* of its selected fields match, so ticking title and text means "either
+one contains this".
 
 Any condition can be **negated**, turning "contains" into "does not contain". This is how you write
 an ignore rule: match the app, negate a content condition, and the branch fires for everything
@@ -86,7 +90,7 @@ Pins the notification and re-alerts on a schedule.
 | Option | Meaning |
 |---|---|
 | Interval | Minutes between repeats |
-| Max repeats | How many times before it gives up; unlimited is allowed |
+| Max repeats | How many times before it gives up — set it to 0 to repeat indefinitely |
 | Sound | Custom sound, or silent |
 | Vibration | Named vibration pattern |
 | Read aloud | Speak the reminder as well as showing it |
