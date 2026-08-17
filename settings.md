@@ -47,8 +47,8 @@ off almost immediately just because it was made just before a boundary.
 Neither affects notification reminders — those repeat on each rule's own interval. What happens
 when an alarm auto-dismisses (snooze again, or cancel) is chosen per routine, not here.
 
-> These control the full-screen alarms used by Routines and Tasks, which aren't part of this
-> release yet. The settings are visible, but there's nothing using them until those features ship.
+*These appear only when Routines or Tasks are enabled, since full-screen alarms belong to those
+features. The hourly chime below is always available.*
 
 ### Hourly chime
 
@@ -67,7 +67,7 @@ two long and two short.
 
 ### Routine alerts
 
-Only relevant when routines are enabled.
+*Shown only when Routines are enabled.*
 
 | Setting | What it does |
 |---|---|
@@ -94,7 +94,7 @@ Only relevant when routines are enabled.
 | **Backup All Data** | Writes a `.json` file wherever you choose |
 | **Restore All Data** | Loads a backup, replacing everything currently in the app |
 | **Clear Captured History** | Empties the timeline; rules and settings untouched |
-| **Clear Routine Logs** | Empties routine completion history |
+| **Clear Routine Logs** | Empties routine completion history. Shown only when Routines are enabled |
 | **Delete All Data** | Removes all captured notifications |
 | **Reset All Settings** | Returns every setting to default; rules untouched |
 | **Reset Onboarding** | Shows the setup walkthrough again on next launch |
