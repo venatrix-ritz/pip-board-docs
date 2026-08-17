@@ -93,6 +93,38 @@ then Samsung's, then whatever else is installed. There's no engine picker in Set
 speed and pitch all come from that engine's own settings under Android's
 **Settings → Accessibility → Text-to-speech output**.
 
+**Bluetooth only.** Off by default. Turn it on (Settings → Notifications → Read Aloud) and
+notifications are only spoken while a Bluetooth audio device is connected — headphones, earbuds, a
+car stereo. Anything arriving while you're disconnected is captured to the Board silently instead.
+The check runs per notification, so unplugging mid-day takes effect immediately.
+
+---
+
+## Getting email to read properly
+
+Email is the one place where picking the right field matters, because mail apps don't use them the
+way you'd guess:
+
+| Field | What an email actually puts there |
+|---|---|
+| Title | The **sender** |
+| Text | The **subject line only** |
+| Big text | The subject *and* the body |
+
+So a rule reading title + text announces the sender and the subject, then stops — which reads as
+the notification being cut off mid-way. To hear the actual message, turn **big text** on.
+
+Because big text repeats the subject at its start, leaving **text** on as well makes the subject
+get read twice. The combination that works is **title + big text, with text off**: sender, then
+subject, then body, each once.
+
+Messaging apps are the opposite — they rarely set big text at all, and when they do it just repeats
+the body. Leave big text off for those, or you'll hear every message twice.
+
+One limit that isn't ProBoard's to fix: some mail apps truncate the body they hand to notifications,
+often around 250 characters. When that happens the message is already cut off before ProBoard sees
+it, so a long email may still end mid-sentence.
+
 ---
 
 ## Reminders can speak too

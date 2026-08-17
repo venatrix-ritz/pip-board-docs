@@ -69,6 +69,28 @@ rule has **Capture summaries** switched on. Turn it off for that rule.
 
 ---
 
+## An email only reads the subject, then stops
+
+Mail apps put the **subject** in the text field and the **subject plus body** in the big text
+field — so a rule reading title and text gets the sender and the subject and nothing else.
+
+Turn **big text** on for that rule, and turn **text** off (big text already starts with the
+subject, so leaving both on reads the subject twice). See
+[Read-aloud](read-aloud.md#getting-email-to-read-properly).
+
+If it still stops partway through a long email, that's the mail app truncating the body before
+ProBoard ever sees it — often around 250 characters. Nothing downstream can recover the rest.
+
+---
+
+## Something was read twice
+
+Usually **big text** is on for an app that doesn't need it. Messaging apps typically leave big
+text empty, or set it to exactly the same string as the body — so reading both says it twice. Turn
+big text off for those rules; keep it on only for email.
+
+---
+
 ## The same notification keeps repeating
 
 Apps repost constantly — every message in a thread, every progress tick. ProBoard treats a repost
