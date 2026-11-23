@@ -120,6 +120,9 @@ while the alert itself speaks, or one that is silent and says nothing; the Actio
 On the debug build the Actions sheet also shows what the alert and its reminder will say, as
 `will say: "…"`, built from the newest captured notification that branch would claim, so a
 wording change shows its effect before you save.
+**▶ try it** plays that line through the same audio queue as a real alert, and **▶ try the reminder**
+plays the reminder's tone, vibration and speech. Both follow your speech settings, so with
+Bluetooth-only on they stay quiet until Bluetooth audio is connected.
 
 Persistent reminders are the reason the app exists. A normal notification is gone the moment you
 brush it off the lock screen; a persistent one isn't.
