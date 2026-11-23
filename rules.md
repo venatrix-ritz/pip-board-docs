@@ -18,6 +18,11 @@ A rule — the editor calls it a **policy** — is a trigger, some branches, and
 The trigger decides which notifications the rule looks at. Branches run in order, and the first one
 whose conditions match wins. If no branch matches, the ELSE runs. Tap a branch's name to rename it, move it up or down, or delete it.
 
+Each card on the rules list says what its rule does, for example
+`DISCORD · speaks · reminds every 5 min ×3 (no speech)`. Open a rule to change it; its POLICY sheet
+has **duplicate** (opens an unsaved copy named "<name> copy") and **delete policy**. Leaving the editor
+with unsaved changes asks first: SAVE, DISCARD or KEEP EDITING.
+
 ---
 
 ## Triggers
