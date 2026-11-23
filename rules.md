@@ -7,10 +7,10 @@ A rule — the editor calls it a **policy** — is a trigger, some branches, and
 > TRIGGER  app ∈ { Messages }
   > BRANCH  "Amanda"
     > MATCH  title is "Amanda"
-    > DO     read aloud
+    > DO     speak
   > BRANCH  "Work"
     > MATCH  text contains "ticket"
-    > DO     remind every 15m
+    > DO     remind 15m×3, speaks
 > ELSE
     > SILENCE
 ```
@@ -93,8 +93,12 @@ Pins the notification and re-alerts on a schedule.
 | Max repeats | How many times before it gives up — set it to 0 to repeat indefinitely |
 | Sound | Custom sound, or silent |
 | Vibration | Named vibration pattern |
-| Read aloud | Speak the reminder as well as showing it; on for a new reminder, using the branch's read-aloud settings |
+| Says | **same as alert** (the default for a new reminder: the reminder reads what the first alert reads, and follows it when that changes; if the alert doesn't speak, it reads the app name, title and text), **custom** (its own read-aloud settings), or **nothing** |
 | Persistent | Survives being swiped away — it comes back until you deal with it in ProBoard |
+
+The collapsed DO / ELSE line spells the reminder out, for example `speak · remind 5m×3, speaks, pinned`
+or `remind 5m×3, no speech`. A `!!` in front of it marks a reminder that rings without speaking
+while the alert itself speaks, or one that is silent and says nothing; the Actions sheet says which.
 
 Persistent reminders are the reason the app exists. A normal notification is gone the moment you
 brush it off the lock screen; a persistent one isn't.
