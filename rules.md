@@ -90,7 +90,7 @@ Pins the notification and re-alerts on a schedule.
 | Option | Meaning |
 |---|---|
 | Interval | Minutes between repeats |
-| Max repeats | How many times before it gives up — set it to 0 to repeat indefinitely |
+| Max repeats | How many times before it gives up — set it to 0 to repeat until you deal with it (the DO line says "until handled") |
 | Sound | Custom sound, or silent |
 | Vibration | Named vibration pattern |
 | Says | **same as alert** (the default for a new reminder: the reminder reads what the first alert reads, and follows it when that changes; if the alert doesn't speak, it reads the app name, title and text), **custom** (its own read-aloud settings), or **nothing** |
