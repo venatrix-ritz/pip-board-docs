@@ -16,7 +16,7 @@ A rule — the editor calls it a **policy** — is a trigger, some branches, and
 ```
 
 The trigger decides which notifications the rule looks at. Branches run in order, and the first one
-whose conditions match wins. If no branch matches, the ELSE runs.
+whose conditions match wins. If no branch matches, the ELSE runs. Tap a branch's name to rename it, move it up or down, or delete it.
 
 ---
 
@@ -145,7 +145,7 @@ empty branch won't accidentally swallow a notification.
 
 ## Per-rule capture toggles
 
-Three switches on each policy control whether it's even allowed to see certain classes of
+Three switches on each policy, under **advanced** in its POLICY sheet, control whether it's even allowed to see certain classes of
 notification. All three default to **off**.
 
 | Toggle | Off (default) | On |
