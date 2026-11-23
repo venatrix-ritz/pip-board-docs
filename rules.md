@@ -93,7 +93,7 @@ Pins the notification and re-alerts on a schedule.
 | Max repeats | How many times before it gives up — set it to 0 to repeat indefinitely |
 | Sound | Custom sound, or silent |
 | Vibration | Named vibration pattern |
-| Read aloud | Speak the reminder as well as showing it |
+| Read aloud | Speak the reminder as well as showing it; on for a new reminder, using the branch's read-aloud settings |
 | Persistent | Survives being swiped away — it comes back until you deal with it in ProBoard |
 
 Persistent reminders are the reason the app exists. A normal notification is gone the moment you
