@@ -79,6 +79,11 @@ this themselves and many get it wrong or leave it blank, so treat it as a hint, 
 Conditions can nest. Group several into an AND (all must match) or an OR (any may match), and wrap
 anything in a NOT to invert it.
 
+To match one of several senders, open a match and use **or also**: the match becomes
+`title contains any of: Sender · Colleague · Shop`, with ✕ on each extra name. Two branches that do
+exactly the same thing, each with one such match, can be joined from the lower one's BRANCH sheet
+(**merge into "…"**); the merged branch keeps the upper one's name.
+
 ---
 
 ## Actions
