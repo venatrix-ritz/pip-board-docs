@@ -16,7 +16,7 @@ The simple option. Tick the fields you want spoken and they're read in order, se
 | Title | yes |
 | Text | yes |
 | Subtext | no |
-| Big text | no |
+| Big text (the **Expanded** chip) | no |
 
 With the defaults, a message notification is spoken as *"Amanda. Are you home yet"* — title, then
 body.
@@ -29,7 +29,7 @@ content as text, just longer.
 
 ## Template mode
 
-Write a template and it replaces field mode entirely. Placeholders get substituted with the
+Open **custom wording** under the field chips and write a template; it replaces field mode entirely. Placeholders get substituted with the
 notification's content:
 
 | Placeholder | Value |
