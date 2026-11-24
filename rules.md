@@ -100,6 +100,10 @@ The collapsed DO / ELSE line spells the reminder out, for example `speak · remi
 or `remind 5m×3, no speech`. A `!!` in front of it marks a reminder that rings without speaking
 while the alert itself speaks, or one that is silent and says nothing; the Actions sheet says which.
 
+On the debug build the Actions sheet also shows what the alert and its reminder will say, as
+`will say: "…"`, built from the newest captured notification that branch would claim, so a
+wording change shows its effect before you save.
+
 Persistent reminders are the reason the app exists. A normal notification is gone the moment you
 brush it off the lock screen; a persistent one isn't.
 
