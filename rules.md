@@ -20,14 +20,16 @@ whose conditions match wins. If no branch matches, the ELSE runs. Tap a branch's
 
 Each card on the rules list says what its rule does, for example
 `DISCORD · speaks · reminds every 5 min ×3 (no speech)`. Open a rule to change it; its POLICY sheet
-has **duplicate** (opens an unsaved copy named "<name> copy") and **delete policy**. Leaving the editor
-with unsaved changes asks first: SAVE, DISCARD or KEEP EDITING.
+has **duplicate** (opens an unsaved copy named "<name> copy", or "<name> copy 2" and up when that
+name is taken) and **delete policy**. Leaving the editor with unsaved changes asks first: SAVE,
+DISCARD or KEEP EDITING.
 
 A new rule starts from a preset: **speak everything from an app** and **silence an app** (both at
 priority -100, so specific rules for the same app get first look), **speak only from a person**,
 **remind me until I deal with it** (speaks, every 15 min until handled, pinned), or **blank**.
 To start from a real notification, long-press it on the board's policy view so it is the only one
-selected, then tap **new rule from this** (⊕): the rule opens with that app, and a branch that speaks
+selected, then tap **new rule from this** (⊕): the rule opens with that app, named "<app> Policy"
+(or "<app> Policy 2" and up when a rule already has that name), and a branch that speaks
 notifications with that title.
 
 ---
